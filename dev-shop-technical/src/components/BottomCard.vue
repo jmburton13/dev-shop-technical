@@ -47,4 +47,8 @@ export default {
     box-shadow: 0px 3px 6px #00000029;
 }
 
+router-link {
+    text-decoration: none !important;
+}
+
 </style>
