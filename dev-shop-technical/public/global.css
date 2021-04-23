@@ -9,16 +9,23 @@ h5 {
     font-weight: 600 !important;  
 }
 
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    color: #499FF6;
+    font-weight: 600 !important;
+    font-size: 16px !important;  
+}
+
 p {
     font-family: 'Open Sans', sans-serif;
     color: white;
-    font-weight: regular;
+    font-weight: 100;
     font-size: 13px;
 }
 
 
 .no-border {
-    border: none;
+    border: none !important;
 }
 
 .bg-blue {
@@ -27,6 +34,10 @@ p {
 
 .bg-white {
     background: white;
+}
+
+.bg-eggshell {
+    background: #EAEAEA;
 }
 
 .round-top {

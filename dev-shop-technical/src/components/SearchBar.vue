@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <input type="text" class="mt-3 no-border rounded-pill" placeholder="     Search" />
+    <div class="bg-white rounded-pill">
+        <input type="text" class="no-border" placeholder="     Search" />
     </div>
 </template>
 
@@ -13,8 +13,14 @@ export default {
 <style scoped>
 
 input {
+    background: url('../assets/searchIcon.svg') no-repeat right 15px center;
     height: 44px;
     width: 279px;
+}
+
+::placeholder {
+    color: #707070;
+    font-weight: lighter;
 }
 
 
