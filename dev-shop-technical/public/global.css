@@ -61,3 +61,12 @@ p {
 .uppercase {
     text-transform: uppercase;
 }
+
+.fade-in {
+    animation: fadeIn .3s ease-in;
+  
+  }
+
+  .remove-underline {
+      text-decoration: none;
+  }

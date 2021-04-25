@@ -1,5 +1,5 @@
 <template>
-    <div class="card no-border p-0 mb-3" :class="{ 'margin-right-5': tutor.id % 2 == 1, 'margin-left-5': tutor.id % 2 ==0 }">
+    <div class="card no-border p-0 mb-3">
        <div>
            <div class="d-flex verified-icon justify-content-center align-items-center">
                 <img v-if="tutor.verified" src="../assets/verifiedIcon.svg" />
@@ -35,10 +35,10 @@ export default {
     height: 40px;
     width: 40px;
     background: #FFFFFFCC;
-    border-top-right-radius: 20px;
+    border-top-right-radius: 15px;
 }
 
-img {
+.card-img-top {
     border-radius: 20px;
 }
 

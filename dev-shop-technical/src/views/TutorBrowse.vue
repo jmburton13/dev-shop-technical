@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="fade-in">
         <router-link :to="{ name: 'home' }">
             <div id="chevron" class="d-flex justify-content-center align-items-center rounded-circle bg-eggshell">
             <img src="../assets/LChevIcon.svg" />
@@ -23,7 +23,7 @@
         </div>
         <!-- OVERLAY -->
         <div id="overlay" class="overlay bg-white" v-show="overlayShow">
-            <div id="chevron" v-on:click="closeNav" class="d-flex justify-content-center align-items-center rounded-circle bg-eggshell">
+            <div id="chevron" v-on:click="closeNav()" class="d-flex justify-content-center align-items-center rounded-circle bg-eggshell">
                 <img src="../assets/LChevIcon.svg" />
             </div>
             <tutor-details :tutor="overlay" />
@@ -135,9 +135,7 @@ export default {
 
         closeNav() {
             document.getElementById("overlay").classList.remove('slide-left');
-            document.getElementById("overlay").classList.add('slide-right');
-            this.overlayShow = false;
-
+            document.getElementById("overlay").classList.add('slide-right')
         },
     },
 }

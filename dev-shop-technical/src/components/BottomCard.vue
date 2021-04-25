@@ -6,15 +6,15 @@
         <div id="card-background" class="bg-blue round-top">
             <div class="mt-5"><h5>EDUCATION</h5></div>
             <div class="d-flex flex-row justify-content-evenly mt-4">
-                <router-link class="w-25" :to="{ name: 'tutorbrowse' }">
+                <router-link class="w-25 remove-underline" :to="{ name: 'tutorbrowse' }">
                     <img class="mb-3" src="../assets/tutorIcon.svg">
                     <p>Find A Tutor</p>
                 </router-link>
-                <router-link class="w-25" :to="{ name: 'unwired' }">
+                <router-link class="w-25 remove-underline" :to="{ name: 'unwired' }">
                     <img class="mb-3" src="../assets/askIcon.svg">
                     <p>Ask A Question</p>
                 </router-link>
-                <router-link class="w-25" :to="{ name: 'unwired' }">
+                <router-link class="w-25 remove-underline" :to="{ name: 'unwired' }">
                     <img class="mb-3" src="../assets/eventIcon.svg">
                     <p>Events</p>
                 </router-link>

@@ -1,5 +1,5 @@
 <template>
-    <div id="main" class="d-flex flex-column justify-content-between">
+    <div id="main" class="d-flex flex-column justify-content-between fade-in">
         <div class="d-flex flex-row justify-content-between align-items-center mt-3 mx-3">
             <search-bar />
             <div id="menu" class="d-flex justify-content-center align-items-center rounded-circle bg-eggshell">

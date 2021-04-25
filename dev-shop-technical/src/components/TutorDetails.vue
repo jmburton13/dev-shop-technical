@@ -24,7 +24,7 @@
         <ul>
             <li v-for="(item, index) in tutor.certifications" :key="index"><span>{{ item }}</span></li>
         </ul>
-        <button v-on:click="consolePrint()" class="rounded-pill no-border bg-blue text-white uppercase mb-4">contact {{ tutor.firstName }}</button>
+        <button v-on:click="consolePrint(), closeNav()" class="rounded-pill no-border bg-blue text-white uppercase mb-4">contact {{ tutor.firstName }}</button>
     </div>
 </template>
 
@@ -35,7 +35,13 @@ export default {
     methods: {
         consolePrint() {
             console.log("Great Googly Moogly");
-        }
+        },
+
+        closeNav() {
+            document.getElementById("overlay").classList.remove('slide-left');
+            document.getElementById("overlay").classList.add('slide-right')
+        },
+
     },
 }
 </script>

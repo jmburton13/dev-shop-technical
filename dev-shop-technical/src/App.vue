@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <transition>
       <router-view />
-    </transition>
   </div>
 </template>
 
@@ -23,11 +21,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  
-  
 }
 
 router-view {
   height: 100vh;
 }
+
+
+
+
+
+
 </style>
