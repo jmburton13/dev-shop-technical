@@ -7,7 +7,7 @@
             <img class="card-img-top" :src="tutor.tutorImage" />
        </div>
        <div class="card-body m-0 p-0">
-           <h4 class="text-center m-0 mt-1 p-0">{{ tutor.name }}</h4>
+           <h4 class="text-center m-0 mt-1 p-0">{{ tutor.firstName }} {{ tutor.lastName }}</h4>
            <p class="text-center m-0 p-0">{{ tutor.grades }}</p>
            <p class="text-center m-0 p-0">{{ tutor.subjects }}</p>
        </div>

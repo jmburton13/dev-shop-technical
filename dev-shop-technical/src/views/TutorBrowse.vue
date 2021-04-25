@@ -43,7 +43,8 @@ export default {
           column2: [],
           overlayShow: false,
           overlay: {
-              name: '',
+              firstName: '',
+              lastName: '',
               image: '',
               grades: '',
               about: '',
@@ -53,7 +54,8 @@ export default {
           tutors: [
             {
                 id: 1,
-                name: 'Tyler Nix',
+                firstName: 'Tyler',
+                lastName: 'Nix',
                 tutorImage: 'https://images.theconversation.com/files/268455/original/file-20190409-2931-rzhl22.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
                 about: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur.',
                 resume: ['2010 Penn State - Math Major', '2014 University of Texas - Doctorate of Math', '2018 - McDonald\'s - Lead Fry Cook'],
@@ -64,7 +66,8 @@ export default {
             },
             {
                 id: 2,
-                name: 'Jerrod Bluk',
+                firstName: 'Jerrod',
+                lastName: 'Bluk',
                 tutorImage: 'https://images.theconversation.com/files/268455/original/file-20190409-2931-rzhl22.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
                 grades: '8th - 12th',
                 subjects: 'Math, Science',
@@ -72,7 +75,8 @@ export default {
             },
             {
                 id: 3,
-                name: 'Tina Grey',
+                firstName: 'Tina',
+                lastName: 'Grey',
                 tutorImage: 'https://images.theconversation.com/files/268455/original/file-20190409-2931-rzhl22.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
                 grades: '8th - 12th',
                 subjects: 'Math, Science',
@@ -80,7 +84,8 @@ export default {
             },
             {
                 id: 4,
-                name: 'Stacy Smith',
+                firstName: 'Stacy',
+                lastName: 'Smith',
                 tutorImage: 'https://images.theconversation.com/files/268455/original/file-20190409-2931-rzhl22.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
                 grades: '8th - 12th',
                 subjects: 'Math, Science',
@@ -88,7 +93,8 @@ export default {
             },
             {
                 id: 5,
-                name: 'Tommy Yang',
+                firstName: 'Tommy',
+                lastName: 'Yang',
                 tutorImage: 'https://images.theconversation.com/files/268455/original/file-20190409-2931-rzhl22.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
                 grades: '8th - 12th',
                 subjects: 'Math, Science',
@@ -96,7 +102,8 @@ export default {
             },
             {
                 id: 6,
-                name: 'Alicia Keys',
+                firstName: 'Alecia',
+                lastName: 'Keys',
                 tutorImage: 'https://images.theconversation.com/files/268455/original/file-20190409-2931-rzhl22.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
                 grades: '8th - 12th',
                 subjects: 'Math, Science',
@@ -106,8 +113,13 @@ export default {
     },
 
     created() {
-        this.column1 = this.tutors.filter( tutor => tutor.id % 2 == 1);
-        this.column2 = this.tutors.filter( tutor => tutor.id % 2 == 0 );
+        for(let i = 0; i < this.tutors.length; i++) {
+            if (i % 2 == 0) {
+                this.column1.push(this.tutors[i]);
+            } else {
+                this.column2.push(this.tutors[i]);
+            }
+        }
     },
 
     methods: {
@@ -123,8 +135,8 @@ export default {
 
         closeNav() {
             document.getElementById("overlay").classList.remove('slide-left');
-            document.getElementById("overlay").classList.add('slide-right').then(
-            this.overlayShow = false);
+            document.getElementById("overlay").classList.add('slide-right');
+            this.overlayShow = false;
 
         },
     },
@@ -160,7 +172,7 @@ h5 {
     z-index: 1;
     height: 100vh;
     width: 100vw;
-    /* background-color: navy !important; */
+    overflow-y: scroll;
 }
 
 .slide-left {

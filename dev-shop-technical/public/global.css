@@ -21,7 +21,6 @@ p {
     font-size: 13px;
 }
 
-
 .no-border {
     border: none !important;
 }
@@ -34,6 +33,10 @@ p {
     background: white;
 }
 
+.bg-grey {
+    background: 707070;
+}
+
 .bg-eggshell {
     background: #EAEAEA;
 }
@@ -41,4 +44,20 @@ p {
 .round-top {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+}
+
+.text-blue {
+    color: #499FF6 !important;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-grey {
+    color: #707070;;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
