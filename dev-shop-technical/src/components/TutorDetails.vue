@@ -91,7 +91,6 @@ p {
 }
 
 ul {
-    list-style-position: inside;
     list-style: none;
 }
 

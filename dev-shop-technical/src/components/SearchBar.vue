@@ -15,7 +15,7 @@ export default {
 input {
     background: url('../assets/searchIcon.svg') no-repeat right 15px center;
     height: 44px;
-    width: 279px;
+    width: 75vw;
 }
 
 ::placeholder {
